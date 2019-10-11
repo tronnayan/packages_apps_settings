@@ -79,4 +79,8 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
+    <!-- Lockscreen rotation -->
+    <string name="lockscreen_rotation_title">Auto-rotate lockscreen</string>
+    <string name="lockscreen_rotation_summary">Allow rotation on the lockscreen</string>
+
 </resources>
