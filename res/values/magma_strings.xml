@@ -71,10 +71,6 @@
     <!-- Title of the setting which enables overlays to customize the adaptive icon shape. -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
 
-    <!-- Android debugging as root -->
-    <string name="adb_enable_root">Root Android debugging</string>
-    <string name="adb_enable_summary_root">Enable Android debugging as root</string>
-
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
