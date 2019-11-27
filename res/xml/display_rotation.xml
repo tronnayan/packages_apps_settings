@@ -22,12 +22,6 @@
         android:key="accelerometer"
         android:title="@string/accelerometer_title" />
 
-    <com.evolution.settings.preference.SystemSettingSwitchPreference
-        android:key="lockscreen_rotation"
-        android:title="@string/lockscreen_rotation_title"
-        android:defaultValue="false"
-        android:dependency="accelerometer" />
-
     <PreferenceCategory
         android:key="display_rotation_category"
         android:title="@string/display_rotation_category_title" />
