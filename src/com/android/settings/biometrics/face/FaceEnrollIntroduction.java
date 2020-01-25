@@ -33,6 +33,7 @@ import com.google.android.setupcompat.template.FooterBarMixin;
 import com.google.android.setupcompat.template.FooterButton;
 import com.google.android.setupcompat.util.WizardManagerHelper;
 import com.google.android.setupdesign.span.LinkSpan;
+import com.google.android.setupdesign.template.RequireScrollMixin;
 
 public class FaceEnrollIntroduction extends BiometricEnrollIntroduction {
 
@@ -134,13 +135,22 @@ public class FaceEnrollIntroduction extends BiometricEnrollIntroduction {
         return findViewById(R.id.error_text);
     }
 
-    @Override
-    protected int checkMaxEnrolled() {
+    private boolean maxFacesEnrolled() {
         if (mFaceManager != null) {
             final int max = getResources().getInteger(
                     com.android.internal.R.integer.config_faceMaxTemplatesPerUser);
             final int numEnrolledFaces = mFaceManager.getEnrolledFaces(mUserId).size();
-            if (numEnrolledFaces >= max) {
+            return numEnrolledFaces >= max;
+        } else {
+            return false;
+        }
+    }
+
+    //TODO: Refactor this to something that conveys it is used for getting a string ID.
+    @Override
+    protected int checkMaxEnrolled() {
+        if (mFaceManager != null) {
+            if (maxFacesEnrolled()) {
                 return R.string.face_intro_error_max;
             }
         } else {
