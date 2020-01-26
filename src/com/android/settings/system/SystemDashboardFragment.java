@@ -17,6 +17,7 @@ package com.android.settings.system;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 
@@ -52,6 +53,16 @@ public class SystemDashboardFragment extends DashboardFragment {
         // We do not want to display an advanced button if only one setting is hidden
         if (getVisiblePreferenceCount(screen) == screen.getInitialExpandedChildrenCount() + 1) {
             screen.setInitialExpandedChildrenCount(Integer.MAX_VALUE);
+        }
+		
+		/** Hide Updater on unofficial builds **/
+		PackageManager pm = getPackageManager();
+
+        try {
+            pm.getPackageInfo("com.magma.updater", PackageManager.GET_ACTIVITIES);
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            getPreferenceManager().findPreference("system_update_settings").setVisible(false);
         }
 
         showRestrictionDialog();

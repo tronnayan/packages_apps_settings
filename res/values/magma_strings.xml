@@ -94,5 +94,8 @@
     <string name="platform_revision">Platform</string>
     <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
     <string name="total_ram">Total RAM</string>
+	
+	<!-- Updater -->
+	<string name="updates_summary">Check for Magma updates</string>
 
 </resources>
