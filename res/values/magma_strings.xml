@@ -101,5 +101,8 @@
 	
 	<!-- Updater -->
 	<string name="updates_summary">Check for Magma updates</string>
+	
+	<!-- Magma Customization -->
+	<string name="magma_customization_category">Customization</string>
 
 </resources>
