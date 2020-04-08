@@ -74,7 +74,7 @@ public class PrivacyDashboardFragment extends DashboardFragment {
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         return buildPreferenceControllers(context, getSettingsLifecycle());
     }
-
+	
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
