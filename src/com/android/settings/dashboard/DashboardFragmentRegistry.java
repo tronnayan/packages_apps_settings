@@ -45,7 +45,7 @@ import com.android.settings.security.SecuritySettings;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settingslib.drawer.CategoryKey;
 
-import com.magma.settings.MagmaSettings;
+import com.conquer.settings.ControlPanel;
 
 import java.util.Map;
 
