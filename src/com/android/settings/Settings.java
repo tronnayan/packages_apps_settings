@@ -179,4 +179,7 @@ public class Settings extends SettingsActivity {
     public static class SystemDashboardActivity extends SettingsActivity {}
     public static class MagmaSettingsActivity extends SettingsActivity {}
 
+    // ControlPanel
+    public static class ControlPanelActivity extends SettingsActivity { /* empty */ }
+
 }

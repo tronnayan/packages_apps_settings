@@ -153,15 +153,4 @@
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
 		
-    <PreferenceCategory
-        android:key="magma_customization_category"
-        android:title="@string/magma_customization_category"
-        android:order="1200"> <!-- Incremented by 100 from last order (i.e. 1100) -->
-
-        <Preference
-            android:key="statusbar_category"
-            android:title="@string/statusbar_title"
-            android:fragment="com.magma.settings.fragments.StatusBarSettings"/>
-    </PreferenceCategory>
-
 </PreferenceScreen>
