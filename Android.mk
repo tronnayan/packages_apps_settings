@@ -71,6 +71,7 @@ include frameworks/base/packages/SettingsLib/common.mk
 include frameworks/base/packages/SettingsLib/search/common.mk
 
 include $(BUILD_PACKAGE)
+# ===Build Package =====
 
 # ====  prebuilt library  ========================
 include $(CLEAR_VARS)
